@@ -2576,7 +2576,7 @@ footer {
   }
 
   .mbook-abt h3 {
-    font-size: 40px;
+    font-size: 84px;
     font-weight: bold;
     color: var(--text);
   }
@@ -2949,6 +2949,11 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+  .mbook-abt h3 {
+    font-size: 67px;
+   
+  }
   .main-page {
     margin: 2rem 0.5rem 0 0.5rem;
   }
@@ -3174,6 +3179,11 @@ footer {
   .to-log-date-right img:first-child {
     height: 77px;
   }
+
+    .mbook-abt h3 {
+    font-size:60px;
+   
+  }
 }
 
 
@@ -3293,9 +3303,7 @@ footer {
     width: 150px;
   }
 
-  .mbook-abt h3 {
-    font-size: 33px;
-  }
+  
 
   .mbook-abt p {
     font-size: 13px;
@@ -3389,7 +3397,7 @@ footer {
   }
 
   .mbook-abt h3 {
-    font-size: 26px;
+    font-size: 53px;
   }
 
   .mbook-abt p {
@@ -3448,6 +3456,10 @@ footer {
 }
 
 @media (max-width: 420px) {
+
+  .mbook-abt h3 {
+    font-size: 43px;
+  }
   .courses-box {
     margin: .5rem 1rem;
   }
