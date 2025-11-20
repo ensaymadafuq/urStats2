@@ -2822,7 +2822,7 @@ footer {
 
   .mlog-first-flex {
     display: flex;
-    align-items: center;
+
     justify-content: space-between;
     width: 100%;
 
@@ -3377,6 +3377,10 @@ footer {
 }
 
 @media (max-width: 475px) {
+
+      .completed-title {
+        font-size: 20px;
+    }
 
   .to-log-stars {
     width: fit-content;
