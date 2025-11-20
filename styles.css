@@ -2251,13 +2251,13 @@ footer {
 
 @media (max-width: 840px) {
 
-.log-in-badge {
+  .log-in-badge {
     position: absolute;
     left: -8rem;
     bottom: -5rem;
     width: fit-content;
     height: 150px;
-}
+  }
 
 
 
@@ -2952,8 +2952,9 @@ footer {
 
   .mbook-abt h3 {
     font-size: 67px;
-   
+
   }
+
   .main-page {
     margin: 2rem 0.5rem 0 0.5rem;
   }
@@ -3128,7 +3129,7 @@ footer {
   .fsample-profile {
     width: 44px;
     height: 44px;
-  
+
   }
 
   .fsample-book-description {
@@ -3180,9 +3181,9 @@ footer {
     height: 77px;
   }
 
-    .mbook-abt h3 {
-    font-size:60px;
-   
+  .mbook-abt h3 {
+    font-size: 60px;
+
   }
 }
 
@@ -3190,7 +3191,7 @@ footer {
 @media (max-width: 590px) {
 
   .courses-box {
-    
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
@@ -3303,7 +3304,7 @@ footer {
     width: 150px;
   }
 
-  
+
 
   .mbook-abt p {
     font-size: 13px;
@@ -3378,9 +3379,9 @@ footer {
 
 @media (max-width: 475px) {
 
-      .completed-title {
-        font-size: 20px;
-    }
+  .completed-title {
+    font-size: 20px;
+  }
 
   .to-log-stars {
     width: fit-content;
@@ -3464,6 +3465,7 @@ footer {
   .mbook-abt h3 {
     font-size: 38px;
   }
+
   .courses-box {
     margin: .5rem 1rem;
   }
@@ -3486,9 +3488,15 @@ footer {
 
 @media (max-width: 390px) {
 
-   .mbook-abt h3 {
+  .to-log {
+    padding: 0rem;
+    gap: 1rem;
+  }
+
+  .mbook-abt h3 {
     font-size: 37px;
   }
+
   .mobile-navbar {
     gap: 1.2rem;
   }
@@ -3548,9 +3556,10 @@ footer {
 
 @media (max-width: 375px) {
 
-   .mbook-abt h3 {
+  .mbook-abt h3 {
     font-size: 35px;
   }
+
   .mobile-navbar {
     gap: .9rem;
   }
