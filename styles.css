@@ -198,7 +198,7 @@ hr {
 
 /* Main Page */
 .main-page {
-  margin: 4.5rem 5.5rem 0 12rem;
+  margin: 4.5rem 5.5rem 2rem 12rem;
   display: flex;
   gap: 1rem;
   flex: 1 0 auto;
@@ -592,7 +592,7 @@ hr {
 
 footer {
   background: #bbbbbb;
-  margin: 5rem 0 0 0;
+  margin: 0 0 0 0;
   font-family: var(--mainFont);
 }
 
@@ -642,9 +642,19 @@ footer {
   gap: 0.5rem;
 }
 
-.socials img {
-  width: 30px;
+.socials i {
+  font-size: 30px;
   height: fit-content;
+  color: var(--text-muted);
+  transition: .2s;
+}
+
+.socials a:hover i{
+  transform: scale(1.4);
+}
+.socials a {
+  text-decoration: none;
+  
 }
 
 .footer-socials {
@@ -727,7 +737,7 @@ footer {
 }
 
 .main-scv-sec {
-  margin: 4.5rem 5.5rem 0 12rem;
+  margin: 4.5rem 5.5rem 2rem 12rem;
   font-family: var(--mainFont);
   display: flex;
   gap: 1rem;
@@ -967,7 +977,7 @@ footer {
 }
 
 .main-feed-sec {
-  margin: 4.5rem 5.5rem 0 12rem;
+  margin: 4.5rem 5.5rem 2rem 12rem;
   display: flex;
   gap: 1rem;
 
@@ -1098,8 +1108,7 @@ footer {
   display: flex;
   gap: 5px;
   align-items: center;
-  cursor:pointer
-
+  cursor: pointer
 }
 
 .bot-btns {
@@ -1156,7 +1165,7 @@ footer {
 }
 
 .main-add-sec {
-  margin: 4.5rem 5.5rem 0 12rem;
+  margin: 4.5rem 5.5rem 2rem 12rem;
   font-family: var(--mainFont);
   display: flex;
   gap: 1rem;
@@ -1246,26 +1255,26 @@ footer {
   position: absolute;
   left: 10px;
   z-index: 100;
-background: var(--bg);
-   border-radius: 5px;
-   display: none;
-   border: 2px solid var(--text);
+  background: var(--bg);
+  border-radius: 5px;
+  display: none;
+  border: 2px solid var(--text);
 }
 
 .ddlinks li {
   list-style: none;
   cursor: pointer;
- color: var(--text);
+  color: var(--text);
   text-wrap: nowrap;
   padding: .7rem;
 
-transition: .2s;
+  transition: .2s;
 
 }
 
 .ddlinks li:hover {
   opacity: .7;
-  
+
 }
 
 .drop-downs h4 {
@@ -1278,7 +1287,7 @@ transition: .2s;
   border: #444 solid 2px;
   border-radius: 25px;
   cursor: pointer;
-  
+
 }
 
 .addcourseTop {
@@ -1305,6 +1314,7 @@ transition: .2s;
   display: flex;
   flex-direction: column;
   padding: 1rem;
+
 }
 
 .first-books {
@@ -1437,7 +1447,7 @@ transition: .2s;
 }
 
 .main-log-sec {
-  margin: 4.5rem 5.5rem 0 12rem;
+  margin: 4.5rem 5.5rem 2rem 12rem;
 }
 
 .log-container::before {
@@ -1977,37 +1987,37 @@ transition: .2s;
 
 @media (max-width: 1680px) {
   .main-page {
-    margin: 4.5rem 5.5rem 0 10rem;
+    margin: 4.5rem 5.5rem 2rem 10rem;
   }
 
   .main-scv-sec {
-    margin: 4.5rem 5.5rem 0 10rem;
+    margin: 4.5rem 5.5rem 2rem 10rem;
   }
 
   .main-feed-sec {
-    margin: 4.5rem 5.5rem 0 10rem;
+    margin: 4.5rem 5.5rem 2rem 10rem;
   }
 
   .main-log-sec {
-    margin: 4.5rem 5.5rem 0 10rem;
+    margin: 4.5rem 5.5rem 2rem 10rem;
   }
 }
 
 @media (max-width: 1440px) {
   .main-page {
-    margin: 2rem 3.5rem 0 9rem;
+    margin: 2rem 3.5rem 2rem 9rem;
   }
 
   .main-scv-sec {
-    margin: 2rem 3.5rem 0 9rem;
+    margin: 2rem 3.5rem 2rem 9rem;
   }
 
   .main-feed-sec {
-    margin: 4.5rem 3.5rem 0 9rem;
+    margin: 4.5rem 3.5rem 2rem 9rem;
   }
 
   .main-log-sec {
-    margin: 4.5rem 3.5rem 0 9rem;
+    margin: 4.5rem 3.5rem 2rem 9rem;
   }
 }
 
@@ -2095,20 +2105,20 @@ transition: .2s;
 
 @media (max-width: 1160px) {
   .main-page {
-    margin: 2rem 1rem 0 7rem;
+    margin: 2rem 1rem 2rem 7rem;
   }
 
   .main-scv-sec {
-    margin: 2rem 1rem 0 7rem;
+    margin: 2rem 1rem 2rem 7rem;
     gap: .5rem;
   }
 
   .main-feed-sec {
-    margin: 4rem 1rem 0 7rem;
+    margin: 4rem 1rem 2rem 7rem;
   }
 
   .main-log-sec {
-    margin: 4rem 1rem 0 7rem;
+    margin: 4rem 1rem 2rem 7rem;
   }
 
   .book-details p {
@@ -2146,7 +2156,7 @@ transition: .2s;
 
   .landing-body aside {
     width: 22%;
-    margin: 2.5rem 1.5rem 0 2rem;
+    margin: 2.5rem 1.5rem 2rem 2rem;
   }
 
   .signin-login-buttons {
@@ -2159,23 +2169,23 @@ transition: .2s;
 
 
   .main-page {
-    margin: 2rem 1.5rem 0 6.5rem;
+    margin: 2rem 2.5rem 2rem 6.5rem;
   }
 
   .main-scv-sec {
-    margin: 2rem 1.5rem 0 6.5rem;
+    margin: 2rem 1.5rem 2rem 6.5rem;
   }
 
   .main-feed-sec {
-    margin: 2rem 1.5rem 0 6.5rem;
+    margin: 2rem 1.5rem 2rem 6.5rem;
   }
 
   .main-add-sec {
-    margin: 2rem 1.5rem 0 6.5rem;
+    margin: 2rem 1.5rem 2rem 6.5rem;
   }
 
   .main-log-sec {
-    margin: 2rem 1.5rem 0 6.5rem;
+    margin: 2rem 1.5rem 2rem 6.5rem;
   }
 
 
@@ -2301,9 +2311,9 @@ transition: .2s;
 @media (max-width: 840px) {
 
 
-   .add-courses-box {
-         padding: 0 1rem;
-      }
+  .add-courses-box {
+    padding: 0 1rem;
+  }
 
 
   .log-in-badge {
@@ -2339,7 +2349,7 @@ transition: .2s;
     background: var(--bg);
   }
 
- 
+
   .addc-line {
     margin-bottom: 2rem;
   }
@@ -2373,12 +2383,12 @@ transition: .2s;
     color: var(--text-muted);
   }
 
-  .mdrop-top{
+  .mdrop-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  
+
   .mddlinks {
     display: none;
   }
@@ -2390,7 +2400,7 @@ transition: .2s;
   }
 
   .mddlinks li:hover {
- opacity: .8;
+    opacity: .8;
   }
 
   .mmain-dropdowns {
@@ -2398,7 +2408,7 @@ transition: .2s;
     width: 100%;
     justify-content: space-between;
     padding: 1.5rem 1rem;
-    
+
     border-radius: 24px;
     border: 1px solid rgba(16, 42, 67, 0.08);
     box-shadow: 0 6px 12px -8px rgba(0, 0, 0, 20);
@@ -2520,19 +2530,19 @@ transition: .2s;
   }
 
   .main-page {
-    margin: 0rem 0rem 0 0rem;
+    margin: 1rem 2rem 2rem 1rem;
   }
 
   .main-scv-sec {
-    margin: 0rem 0rem 0 0rem;
+    margin: 0rem 0rem 2rem 0rem;
   }
 
   .main-feed-sec {
-    margin: 0rem 0rem 0 0rem;
+    margin: 0rem 0rem 2rem 0rem;
   }
 
   .main-add-sec {
-    margin: 0rem 0rem 0 0rem;
+    margin: 0rem 0rem 2rem 0rem;
   }
 
   .footer-box {
@@ -3034,11 +3044,11 @@ transition: .2s;
   }
 
   .main-page {
-    margin: 2rem 0.5rem 0 0.5rem;
+    margin: 2rem 2rem 2rem 0.5rem;
   }
 
   .main-scv-sec {
-    margin: 2rem 0.5rem 0 0.5rem;
+    margin: 2rem 0.5rem 2rem 0.5rem;
   }
 
   .smTitle,
@@ -3120,11 +3130,11 @@ transition: .2s;
   .main-page {
     flex-direction: column;
 
-    margin: 2rem 1.5rem 0 1.5rem;
+    margin: 2rem 1.5rem 2rem 1.5rem;
   }
 
   .main-scv-sec {
-    margin: 2rem 1.5rem 0 1.5rem;
+    margin: 2rem 1.5rem 2rem 1.5rem;
     flex-direction: column;
   }
 
@@ -3336,7 +3346,7 @@ transition: .2s;
   }
 
   .main-page {
-    margin: 2rem 1rem 0 1rem;
+    margin: 2rem 1rem 2rem 1rem;
   }
 
   .smTitle,
@@ -3430,7 +3440,7 @@ transition: .2s;
 
 
   .add-container {
-    padding: .6rem .5rem;
+    padding: 2.2rem .5rem;
   }
 
   .img-option img {
@@ -3457,13 +3467,13 @@ transition: .2s;
 
 @media (max-width: 475px) {
 
-      .madd-head-box {
-        padding: 0 1rem;
-      }
+  .madd-head-box {
+    padding: 0 1rem;
+  }
 
-      .add-courses-box {
-         padding: 0 1rem;
-      }
+  .add-courses-box {
+    padding: 0 1rem;
+  }
 
   .completed-title {
     font-size: 20px;
@@ -3574,9 +3584,13 @@ transition: .2s;
 
 @media (max-width: 390px) {
 
-      .mddlinks li {
-      font-size: 14px;
-    }
+  .maddcourseTop h1 {
+    font-size: 27px;
+  }
+
+  .mddlinks li {
+    font-size: 14px;
+  }
 
   .to-log {
     padding: 0rem;
