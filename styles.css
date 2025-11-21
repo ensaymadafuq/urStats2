@@ -2019,6 +2019,9 @@ footer {
   .main-log-sec {
     margin: 4.5rem 3.5rem 2rem 9rem;
   }
+    .main-add-sec {
+    margin: 4.5rem 3.5rem 2rem 9rem;
+  }
 }
 
 @media (max-width: 1366px) {
