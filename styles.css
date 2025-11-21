@@ -2313,6 +2313,10 @@ footer {
 
 @media (max-width: 840px) {
 
+      .mlog-first-flex img {
+        
+        height: 40px;
+    }
 
   .add-courses-box {
     padding: 0 1rem;
