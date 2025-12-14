@@ -4,13 +4,18 @@ let savedCourses = JSON.parse(localStorage.getItem('courses')) || [];
 let myBio = JSON.parse(localStorage.getItem('bio')) || [];
 
 
-const bioInput = document.querySelector('.user-input');
 
-bioInput.addEventListener('blur', function () {
-    localStorage.setItem('bio', JSON.stringify(bioInput.value));
-});
+const bioInput = document.querySelector('.user-input');
+if (bioInput) {
+    bioInput.addEventListener('blur', function (){
+            localStorage.setItem('bio', JSON.stringify(bioInput.value));
+    });
+}
+
+
 
 if (enrolledBox) {
+
     displayEnrolledCourses()
     bioInput.value = myBio
 }
