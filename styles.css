@@ -369,6 +369,7 @@ hr {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
+ 
 }
 
 .courses-box img {
@@ -380,7 +381,6 @@ hr {
 }
 
 .courses-box img:hover {
-  filter: brightness(0.5);
   cursor: pointer;
 }
 
@@ -397,6 +397,7 @@ hr {
   transition: background 0.18s ease, color 0.18s ease;
   filter: drop-shadow(1px 4px 4.3px #8190a3);
   text-decoration: none;
+ 
 }
 
 .courses-box .add-course:hover {
@@ -1317,12 +1318,18 @@ footer {
 
 }
 
+
+.book1 {
+  position: relative;
+}
+
+
 .first-books {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
   padding: 0 5rem 2rem 5rem;
-
+position: relative;
 }
 
 
@@ -1342,7 +1349,7 @@ footer {
 .img-option {
   padding: .6rem;
   background-color: rgba(0, 0, 0, 0.689);
-  width: fit-content;
+  
   display: none;
   gap: .5rem;
   border-radius: 7px;
@@ -1358,13 +1365,42 @@ footer {
   height: 20px;
 }
 
-.book1 {
+
+
+
+
+.enrolled-pop-option {
+  padding: .6rem 1rem;
+  background-color: rgba(0, 0, 0, 0.689);
+  width: fit-content;
+  display: none;
+  gap: .7rem;
+  border-radius: 7px;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.enrolled-pop-option i {
+ font-size: 25px;
+  color: var(--bg);
+  cursor: pointer;
+}
+
+.enrolled-pop-option i:hover {
+  color: var(--text-muted);
+}
+
+
+
+.book-enrolled {
   position: relative;
 }
 
-.book1:hover .img-option {
+.book-enrolled:hover .enrolled-pop-option {
   display: flex;
-
 }
 
 
