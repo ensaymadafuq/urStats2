@@ -1,156 +1,37 @@
+// module imports
+import { getBio, getUsername, setBio, setUsername } from "./src/storage.js";
+import { displayEnrolledCourses } from "./src/ui.js";
+import { handleAddCourseHover, handleEnrolledHover, handleHoverLeave, handleLogin, handleBioBlur } from "./src/events.js";
 
-const enrolledBox = document.querySelector('.courses-box')
-let savedCourses = JSON.parse(localStorage.getItem('courses')) || [];
-let myBio = JSON.parse(localStorage.getItem('bio')) || [];
+// kuya doms
+const enrolledBox = document.querySelector(".courses-box");
+const bioInput = document.querySelector(".user-input");
+const userUsername = document.querySelector(".user-details h1");
+const myUsername = document.querySelector(".enterMyuser");
+const loginBtn = document.querySelector('.signin-login-buttons a[href="user.html"]');
+const userBody = document.querySelector("body");
 
+// Banat
 
-
-const bioInput = document.querySelector('.user-input');
+// Bio input event
 if (bioInput) {
-    bioInput.addEventListener('blur', function (){
-            localStorage.setItem('bio', JSON.stringify(bioInput.value));
-    });
+  bioInput.addEventListener("blur", handleBioBlur(bioInput, setBio));
 }
 
-
-
+// User page initialization
 if (enrolledBox) {
-
-    displayEnrolledCourses()
-    bioInput.value = myBio
+  displayEnrolledCourses(enrolledBox, handleEnrolledHover(userBody, enrolledBox, displayEnrolledCourses, handleEnrolledHover, handleHoverLeave), handleHoverLeave);
+  bioInput.value = getBio();
+  userUsername.innerText = getUsername();
 }
 
-
-
-document.querySelectorAll('.book1').forEach(book => {
-
-    book.addEventListener('mouseenter', function () {
-        let popOption = this.querySelector('.img-option')
-        const img = this.querySelector('img');
-        const imgSrc = img?.src || '';
-        const fileName = imgSrc.split('/').pop().split('.')[0];
-        const toAdd = {
-            book: fileName
-        }
-        console.log(toAdd)
-        if (!popOption) {
-
-            popOption = document.createElement('div')
-            popOption.className = 'img-option'
-            popOption.innerHTML = `<img src="assets/addcourse/icon.png" alt="" class='addthiscourse'>
-                                <img src="assets/addcourse/Vector.png" alt="">
-                                <img src="assets/addcourse/Frame.png" alt="">`;
-
-
-            this.appendChild(popOption)
-        }
-
-        popOption.style.display = 'flex'
-
-
-
-        popOption.querySelector('.addthiscourse').addEventListener('click', function () {
-
-            if (!savedCourses.some(c => c.book === toAdd.book)) {
-                savedCourses.push(toAdd)
-                localStorage.setItem('courses', JSON.stringify(savedCourses))
-            }
-
-
-            displayEnrolledCourses()
-
-
-        })
-    })
-
-    book.addEventListener('mouseleave', function () {
-        const popOption = this.querySelector('.img-option');
-        if (popOption) popOption.style.display = 'none';
-    });
-})
-
-
-function displayEnrolledCourses() {
-    enrolledBox.innerHTML = savedCourses.map((book) => {
-
-        return (`
-           <div class="book-enrolled">
-              <img src="assets/MAIN PAGE/${book.book}.png" alt="" />
-            </div>
-            `)
-    }).join('');
-
-    const addCourseButton = `   <div class="add-course">
-              <a href="addcourse.html"><img src="assets/MAIN PAGE/addcourse.png" alt="" /></a>
-
-            </div>
-`
-
-    enrolledBox.insertAdjacentHTML('beforeend', addCourseButton)
-}
-
-
-
-
-
-
-
-
-function removeEnrolledCourse(book) {
-    const bookName = book.querySelector('img').src.split('/').pop().split('.')[0];
-    savedCourses = savedCourses.filter(c => c.book !== bookName);
-    localStorage.setItem('courses', JSON.stringify(savedCourses));
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-// book option popup
-document.querySelectorAll('.book-enrolled').forEach(book => {
-    book.addEventListener('mouseenter', function () {
-
-        let popOption = this.querySelector('.enrolled-pop-option');
-
-        if (!popOption) {
-            const img = this.querySelector('img');
-            const imgSrc = img?.src || '';
-            const fileName = imgSrc.split('/').pop().split('.')[0];
-            popOption = document.createElement('div');
-            popOption.className = 'enrolled-pop-option';
-            popOption.innerHTML = `
-        <a href="bookspage/${fileName}book.html"><i class="fa-solid fa-eye"></i></a>
-        <i class="fa-solid fa-circle-minus remove-icon" ></i>
-      `;
-            this.appendChild(popOption);
-        }
-
-        popOption.style.display = 'flex';
-
-        const removeIcon = popOption.querySelector('.remove-icon');
-        removeIcon.addEventListener('click', function () {
-            book.remove();
-            removeEnrolledCourse(book)
-        })
-    });
-
-    book.addEventListener('mouseleave', function () {
-        const popOption = this.querySelector('.enrolled-pop-option');
-        if (popOption) popOption.style.display = 'none';
-    });
-
-
+// Add course controls
+document.querySelectorAll(".book1").forEach((book) => {
+  book.addEventListener("mouseenter", handleAddCourseHover(enrolledBox, handleEnrolledHover(userBody, enrolledBox, displayEnrolledCourses, handleEnrolledHover, handleHoverLeave), handleHoverLeave));
+  book.addEventListener("mouseleave", handleHoverLeave);
 });
 
-
-
-
-
+// Login handler
+if (loginBtn) {
+  loginBtn.addEventListener("click", handleLogin(myUsername, setUsername));
+}

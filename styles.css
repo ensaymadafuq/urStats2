@@ -446,7 +446,7 @@ hr {
 
 /* recent log item layout */
 .log-item {
-  display: flex;
+  display: none;
   align-items: flex-start;
   gap: 0.75rem;
   padding: 0.6rem 0.45rem;
@@ -1703,6 +1703,12 @@ position: relative;
   margin: .5rem;
 }
 
+.enterMyuser {
+  margin: 1rem;
+  padding: .2rem;
+  border: none;
+}
+
 .signin-login-buttons {
   display: flex;
   justify-content: center;
@@ -1728,6 +1734,7 @@ position: relative;
   height: 40px;
   border: none;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .problem-container {
@@ -1978,6 +1985,20 @@ position: relative;
 
 .signin-login-buttons button:hover {
   cursor: pointer;
+}
+
+.unenrollConf {
+  position: fixed ;
+top: 0;
+  left: 50%;
+  flex-direction:column;
+  transform: translateX(-50%);
+justify-content:center;
+align-items: center;
+background-color: #00000077;
+width: 100%;
+height: 100%;
+z-index: 100;
 }
 
 
