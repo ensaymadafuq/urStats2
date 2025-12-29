@@ -8,8 +8,8 @@ export function ilikeu(
 ) {
   const savedLikes = getLikes();
   if (!Array.isArray(savedLikes)) savedLikes = [];
-
   const isLiked = savedLikes.some((x) => x.like === toAdd.like);
+
 
   if (!isLiked) {
     likeButton.style.color = "red";
@@ -25,8 +25,7 @@ export function ilikeu(
   } else {
     likeButton.style.color = "";
     const toRemove = savedLikes.filter((x) => x.like !== toAdd.like);
-    savedLikes.pop(toRemove);
-    setLikes(savedLikes);
+    setLikes(toRemove);
     enrollMsgs(
       "Course removed from likes.",
       "#F8D7DA",
@@ -34,5 +33,23 @@ export function ilikeu(
       "#F5C6CB solid 2px",
       userBody
     );
+  }
+}
+
+export function displayLikes(getLikes) {
+  const savedLikes = getLikes();
+  if (!Array.isArray(savedLikes)) savedLikes = [];
+  const likesBox = document.querySelector(".likes-box");
+  if (savedLikes && likesBox) {
+    likesBox.innerHTML = savedLikes.map(
+      (course) =>
+        `
+   <div class="likedBook">
+<img src="assets/MAIN PAGE/${course.like}.png" alt="" />
+            </div>
+`
+    ).join("");
+  } else {
+
   }
 }

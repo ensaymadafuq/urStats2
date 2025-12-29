@@ -15,6 +15,7 @@ import {
   handleLogin,
   handleBioBlur,
 } from "./src/events.js";
+import { displayLikes } from "./src/addcourse.js";
 
 // kuya doms
 const enrolledBox = document.querySelector(".courses-box");
@@ -25,7 +26,7 @@ const loginBtn = document.querySelector(
   '.signin-login-buttons a[href="user.html"]'
 );
 const userBody = document.querySelector("body");
-const addBody = document.querySelector("body .add-body");
+const likedBody = document.querySelector("body .liked-body");
 
 // Banat
 
@@ -33,6 +34,11 @@ const addBody = document.querySelector("body .add-body");
 if (bioInput) {
   bioInput.addEventListener("blur", handleBioBlur(bioInput, setBio));
 }
+
+if (likedBody){
+  displayLikes(getLikes)
+}
+
 
 // User page initialization
 if (enrolledBox) {
