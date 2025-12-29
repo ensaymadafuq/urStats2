@@ -19,10 +19,10 @@ export function displayEnrolledCourses(enrolledBox, handleEnrolledHover, handleH
   });
 }
 
-export function removeEnrolledCourse(book, enrolledBox, displayEnrolledCourses, handleEnrolledHover, handleHoverLeave) {
+export function removeEnrolledCourse(book) {
   const bookName = book.querySelector("img").src.split("/").pop().split(".")[0];
   let savedCourses = getSavedCourses();
   savedCourses = savedCourses.filter((c) => c.book !== bookName);
   setSavedCourses(savedCourses);
-  displayEnrolledCourses(enrolledBox, handleEnrolledHover, handleHoverLeave);
+ 
 }
