@@ -8,7 +8,7 @@ import {
   setLike,
 } from "./storage.js";
 import { displayEnrolledCourses, removeEnrolledCourse } from "./ui.js";
-import { ilikeu } from "./addcourse.js";
+import { ilikeu } from "../features/addcourse/addcourse.js";
 
 // banat
 export function handleAddCourseHover( userBody,
@@ -26,9 +26,9 @@ export function handleAddCourseHover( userBody,
     if (!popOption) {
       popOption = document.createElement("div");
       popOption.className = "img-option";
-      popOption.innerHTML = `<img src="assets/addcourse/icon.png" alt="" class='addthiscourse'>\n   
+      popOption.innerHTML = `<img src="../public/assets/addcourse/icon.png" alt="" class='addthiscourse'>\n   
             <i class="fa-solid fa-heart like-button"></i>\n                
-                      <img src="assets/addcourse/Frame.png" alt="">`;
+                      <img src="../public/assets/addcourse/Frame.png" alt="">`;
       this.append(popOption);
     }
 
@@ -130,7 +130,7 @@ export function handleEnrolledHover(
     if (!popOption) {
       popOption = document.createElement("div");
       popOption.className = "enrolled-pop-option";
-      popOption.innerHTML = `<a href="bookspage/${fileName}book.html"><i class="fa-solid fa-eye"></i></a>\n                          <i class="fa-solid fa-circle-minus remove-icon"></i>`;
+      popOption.innerHTML = `<a href="books/${fileName}book.html"><i class="fa-solid fa-eye"></i></a>\n                          <i class="fa-solid fa-circle-minus remove-icon"></i>`;
       this.appendChild(popOption);
     }
 

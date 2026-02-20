@@ -17,11 +17,11 @@ export function displayEnrolledCourses(
   enrolledBox.innerHTML = savedCourses
     .map(
       (book) =>
-        `<div class="book-enrolled"><img src="assets/MAIN PAGE/${book.book}.png" alt="" /></div>`
+        `<div class="book-enrolled"><img src="../public/assets/MAIN PAGE/${book.book}.png" alt="" /></div>`
     )
     .join("");
 
-  const addCourseButton = `<div class="add-course"><a href="addcourse.html"><img src="assets/MAIN PAGE/addcourse.png" alt="" /></a></div>`;
+  const addCourseButton = `<div class="add-course"><a href="addcourse.html"><img src="../public/assets/MAIN PAGE/addcourse.png" alt="" /></a></div>`;
   enrolledBox.insertAdjacentHTML("beforeend", addCourseButton);
 
   document.querySelectorAll(".book-enrolled").forEach((book) => {

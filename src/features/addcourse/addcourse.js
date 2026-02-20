@@ -48,7 +48,7 @@ export function displayLikes(getLikes) {
         (course) =>
           `
    <div class="likedBook">
-<img src="assets/MAIN PAGE/${course.like}.png" alt="" class='book'/>
+<img src="../public/assets/MAIN PAGE/${course.like}.png" alt="" class='book'/>
             </div>
 `
       )

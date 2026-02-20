@@ -1,4 +1,4 @@
-import { getSavedCourses } from "./storage.js";
+import { getSavedCourses } from "../../shared/storage.js";
 
 export function addLogType(logBody, logTypesHidden, addTypeButton) {
   addTypeButton.addEventListener("click", function () {
@@ -41,7 +41,7 @@ export function whatToLog(logBody) {
     enrolledCourses.innerHTML = getCourses
       .map(
         (x) => `
-      <img src="assets/MAIN PAGE/${x.book}.png" alt="" />
+      <img src="../public/assets/MAIN PAGE/${x.book}.png" alt="" />
       `,
       )
       .join("");
@@ -57,7 +57,7 @@ export function whatToLog(logBody) {
       const clickedCourse =
         e.target.closest("img")?.src.split("/").pop().split(".")[0] || "";
       if (clickedCourse) {
-        courseToLog.src = `assets/MAIN PAGE/${clickedCourse}.png`;
+        courseToLog.src = `../public/assets/MAIN PAGE/${clickedCourse}.png`;
         coursesContainer.style.display = "none";
       }
     });
@@ -80,6 +80,7 @@ export function starRating() {
     star.addEventListener("click", () => {
       myCurrentRate = idx + 1;
       execStarboy(myCurrentRate, "selected");
+      
     });
   });
 
@@ -92,6 +93,7 @@ export function starRating() {
       }
     });
   }
+  console.log(myCurrentRate)
 }
 
 //main log function
@@ -101,12 +103,13 @@ export function logThis() {
   const myReviewTitle = document.querySelector(".add-log-title");
   const myLogDate = document.querySelector(".log-date1");
   const myLogPoster = document.querySelector(".posterimg");
-
+ 
 
 
   const saveButton = document.querySelector(".saveButton");
 
   saveButton.addEventListener("click", () => {
+    const selectedStars = document.querySelectorAll('.log-y-stars .selected');
     const myLogTypes = document.querySelectorAll(".typeOfThisLog img");
     const logData = {
       review: myReview.value,
@@ -114,6 +117,7 @@ export function logThis() {
       date: myLogDate.value,
       poster: myLogPoster.src,
       types: Array.from(myLogTypes).map((x) => x.src),
+      stars: selectedStars.length
     };
 
     const logs = JSON.parse(localStorage.getItem("logData")) || [];
@@ -126,6 +130,7 @@ export function logThis() {
       return;
     }
     localStorage.setItem("logData", JSON.stringify(logs));
-    window.location.href = "user.html";
+    // window.location.href = "user.html";
+  
   });
 }

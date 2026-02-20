@@ -6,8 +6,8 @@ import {
   setUsername,
   setLike,
   getLikes,
-} from "./src/storage.js";
-import { displayEnrolledCourses, initGoals } from "./src/ui.js";
+} from "./src/shared/storage.js";
+import { displayEnrolledCourses, initGoals } from "./src/shared/ui.js";
 import {
   handleAddCourseHover,
   handleEnrolledHover,
@@ -15,10 +15,10 @@ import {
   handleLogin,
   handleBioBlur,
   enrollMsgs,
-} from "./src/events.js";
-import { displayLikes, searchBook } from "./src/addcourse.js";
-import { addLogType, logThis, starRating, whatToLog } from "./src/log.js";
-import { loadFeed } from "./src/feed.js";
+} from "./src/shared/events.js";
+import { displayLikes, searchBook } from "./src/features/addcourse/addcourse.js";
+import { addLogType, logThis, starRating, whatToLog } from "./src/features/log/log.js";
+import { loadFeed } from "./src/features/feed/feed.js";
 
 // kuya doms
 const enrolledBox = document.querySelector(".courses-box");
